@@ -3,7 +3,7 @@
 This project presents a smart glove that uses AI to help keep workers safe in places like factories and other risky areas. The glove has several sensors that can find dangers in the environment and from physical sources. It sends instant feedback and helps guide actions to handle those threats.
 
 # Overview
-The AI-powered smart glove is an integrated safety device that uses a number of sensors to keep an eye on a worker's surroundings and physical condition.  It promptly notifies the user via haptic (vibration) and visual (LED) signs when it detects dangerous gas levels, unsafe temperatures, excessive force, and abnormal health signals.  For real-time monitoring and upcoming AI-based predictive analysis, it concurrently logs sensor data to a Firebase cloud database.
+The AI-powered smart glove is an integrated safety device that uses a number of sensors to keep an eye on a worker's surroundings and physical condition.  It promptly notifies the user via haptic (vibration) and visual (LED) signs when it detects dangerous gas levels, unsafe temperatures, excessive force, and abnormal health signals.  For real-time monitoring and upcoming AI-based predictive analysis, it concurrently logs sensor data to a Firebase cloud database nd sends email alerts through LabVIEW when danger thresholds are exceeded.
 
 # Key Highlights
 Real-time detection of environmental and physical hazards
@@ -11,6 +11,8 @@ Real-time detection of environmental and physical hazards
 Adaptive signal filtering for improved accuracy
 
 Immediate alert system using LED and vibration motor
+
+Email alerts sent automatically through LabVIEW and also through Firebase event triggers
 
 Cloud data logging every 5 seconds to Firebase
 
@@ -50,6 +52,7 @@ Power the system and launch the Python and LabVIEW scripts.
 The system will:
 Read sensor values
 Apply low-pass filtering
+Send automatic email alerts via LabVIEW when critical thresholds are reached
 Send alerts via vibration/LED
 Upload data to Firebase every 5 seconds
 CSV data is auto-generated for AI/ML training or analysis.
